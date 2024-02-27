@@ -1,0 +1,295 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fd8345;
+  background-image: url("images/background.png");
+  background-size: cover;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.master-box {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.pokemon-img {
+  display: inline-block;
+  position: relative;
+  right: -2.5vw;
+}
+
+.sprite {
+  width: 40vw;
+  height: auto;
+  -webkit-filter: drop-shadow(3px 3px 1px #222);
+  filter: drop-shadow(3px 3px 1.5px #222);
+  animation: shake 0.5s ease-in-out;
+}
+
+.numName {
+  width: 50vw;
+  height: 4vw;
+  display: flex;
+  margin-bottom: 3vw;
+  background-color: black;
+  color: white;
+  overflow: hidden;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+
+  .color-frame {
+    width: 16vw;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(0 0, 100% 0%, 85% 100%, 0% 100%);
+    background-color: #fc5535;
+  }
+
+  .tinySprite {
+    position: relative;
+    left: -1.5vw;
+    width: 4vw;
+  }
+
+  .name-cont {
+    width: auto;
+    height: auto;
+    margin-left: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .number {
+    font-size: 1.8vw;
+    position: relative;
+    left: -0.7vw;
+  }
+
+  .name {
+    font-size: 2.5vw;
+  }
+}
+
+.stats-container {
+  display: inline-block;
+  width: auto;
+  position: relative;
+  left: -5vw;
+  z-index: -1;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-corner-frame {
+  top: -40vw;
+  left: -10vw;
+  transform: rotate(25deg);
+}
+
+.bottom-corner-frame {
+  bottom: -40vw;
+  right: -10vw;
+  transform: rotate(205deg);
+}
+
+.top-corner-frame,
+.bottom-corner-frame {
+  width: 30vw;
+  height: 100vw;
+  display: flex;
+  position: absolute;
+  z-index: -1;
+}
+
+.frame1 {
+  background-color: #fff;
+}
+
+.frame2 {
+  background-color: #fc5535;
+}
+
+.frame1,
+.frame2 {
+  width: inherit;
+  height: inherit;
+}
+
+.classification {
+  padding: 10px 0px 10px 0px;
+  width: 37vw;
+  background-color: #f2f1ef;
+  margin-bottom: 4px;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.info-container {
+  background-color: white;
+  background-image: linear-gradient(to right, #f1f0ee 40%, #fff 41%);
+  height: 16vw;
+  width: 37vw;
+  display: grid;
+  grid-template-columns: 0.67fr 1fr;
+  grid-template-rows: auto;
+  margin-bottom: 4px;
+}
+
+.type,
+.type-container,
+.height,
+.height-container,
+.weight,
+.weight-container {
+  border-bottom: solid black 1px;
+}
+
+#row1 {
+  font-size: 1.8vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#row2 {
+  font-size: 1.8vw;
+  padding-left: 1vw;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.type1 {
+  width: 10vw;
+  height: 2.7vw;
+  background-color: #5e5e5e;
+  overflow: hidden;
+  margin-right: 0.5vw;
+  border-radius: 0.25vw;
+  display: flex;
+  align-items: center;
+
+  .type1-frame {
+    width: 4vw;
+    height: 6vw;
+    clip-path: polygon(0 0, 100% 0%, 25% 100%, 0% 100%);
+    background-color: #63bc5a;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+
+    .type1-image {
+      width: 2.5vw;
+      height: 2.5vw;
+    }
+  }
+
+  .type1-text {
+    width: 4.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+    font-weight: 900;
+    font-size: 1.2vw;
+  }
+}
+
+.type2 {
+  width: 10vw;
+  height: 2.7vw;
+  background-color: #5e5e5e;
+  overflow: hidden;
+  border-radius: 0.25vw;
+  display: flex;
+  align-items: center;
+
+  .type2-frame {
+    width: 4vw;
+    height: 6vw;
+    clip-path: polygon(0 0, 100% 0%, 25% 100%, 0% 100%);
+    background-color: #aa6bc8;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+
+    .type2-image {
+      width: 2.5vw;
+      height: 2.5vw;
+    }
+  }
+
+  .type2-text {
+    width: 4.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+    font-weight: 900;
+    font-size: 1.2vw;
+  }
+}
+
+.description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: white;
+  font-size: 1.6vw;
+  width: 37vw;
+  padding: 2.4vw;
+  box-sizing: border-box;
+}
+
+/* Define the shake animation */
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  10%,
+  90% {
+    transform: translateX(-10px);
+  }
+  20%,
+  80% {
+    transform: translateX(10px);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translateX(-10px);
+  }
+  40%,
+  60% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
