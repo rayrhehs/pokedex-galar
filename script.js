@@ -67,7 +67,7 @@ class PokedexInit {
         typeImg.setAttribute("class", "type" + typeCount + "-image");
         typeImg.setAttribute(
           "src",
-          "./images/pokemon_types/Pokemon_Type_Icon_" + typeName + ".svg"
+          "../images/pokemon_types/Pokemon_Type_Icon_" + typeName + ".svg"
         );
 
         let typeText = document.createElement("span");
