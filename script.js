@@ -151,7 +151,7 @@ const pokeCatchRate = document.querySelector(".catch-rate-text");
 const typeContainer = document.querySelector(".type-container");
 
 function addPokeNum() {
-  if (pokeNum < 906) {
+  if (pokeNum < 905) {
     pokeNum += 1;
   }
   pokeEntry.getPokeData(
