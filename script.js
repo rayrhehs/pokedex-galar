@@ -54,14 +54,17 @@ class PokedexInit {
       typeContainer.innerHTML = "";
 
       data.types.forEach((type) => {
-        let typeName = type.type.name;
+        let typeName =
+          type.type.name.charAt(0).toUpperCase() + type.type.name.slice(1);
+        console.log(typeName);
+        let typeColor = type.type.name;
 
         let typeDiv = document.createElement("div");
         typeDiv.setAttribute("class", "type" + typeCount);
 
         let typeFrame = document.createElement("div");
         typeFrame.setAttribute("class", "type" + typeCount + "-frame");
-        typeFrame.style.backgroundColor = "#" + this.typeColors[typeName];
+        typeFrame.style.backgroundColor = "#" + this.typeColors[typeColor];
 
         let typeImg = document.createElement("img");
         typeImg.setAttribute("class", "type" + typeCount + "-image");
@@ -69,7 +72,6 @@ class PokedexInit {
           "src",
           "images/pokemon_types/Pokemon_Type_Icon_" + typeName + ".svg"
         );
-        console.log("Type Image URL:", typeImg.src);
 
         let typeText = document.createElement("span");
         typeText.setAttribute("class", "type" + typeCount + "-text");
