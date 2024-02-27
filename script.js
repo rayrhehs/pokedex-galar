@@ -42,7 +42,9 @@ class PokedexInit {
       let typeCount = 1;
 
       pokeSprite.src =
-        "images/pokemon_sprites/all/pokemon" + pokeNumber + ".png";
+        "https://raw.githubusercontent.com/HybridShivam/Pokemon/master/assets/images/" +
+        String(pokeNumber).padStart(3, "0") +
+        ".png";
       pokeNumbox.textContent = "No. " + String(pokeNumber).padStart(3, "0");
       pokeName.textContent =
         data.species.name.charAt(0).toUpperCase() + data.species.name.slice(1);
